@@ -43,6 +43,9 @@ class Ancient implements Listener
 
                 $relic = Item::get(54, 101, 1);
                 $relic->setCustomName(TF::RESET . TF::AQUA . "Ancient" . TF::GRAY . " relic");
+                $relic->setLore(TF::RESET . TF::LIGHT_PURPLE . "Level:" . TF::GRAY . "§l§7[§r§b||||||§f||||§l§7]§r");
+                $relic->setLore(TF::RESET . TF::LIGHT_PURPLE . "Source:" . TF::GRAY . "§6Kits , Crates , Vouchers§7!");
+                $relic->setLore(TF::RESET . TF::LIGHT_PURPLE . "To Open:" . TF::GRAY . "§3(§7Right-Click§3)");
                 $player->getInventory()->addItem($relic);
                 $player->getServer()->broadcastMessage(TF::BOLD . TF::DARK_GRAY . "(" . TF::DARK_PURPLE . "!" . TF::DARK_GRAY . ")" . TF::RESET . TF::GRAY . TF::RESET . TF::GRAY . " $name Found an Ancient Relic!");
             }
@@ -69,36 +72,43 @@ class Ancient implements Listener
             $relic = Item::get(54, 101, 1);
             $item1 = Item::get(310, 0, 1);
             $item1->setCustomName(TF::AQUA . "Ancient" . TF::GRAY . "Helmet");
+            $item1->setLore(TF::AQUA . "Level:" . TF::GRAY . "§l§7[§r§b|||§f|||||||§l§7]§r");
             $item1->addEnchantment(new EnchantmentInstance($prot, 1));
             $item1->addEnchantment(new EnchantmentInstance($unb, 1));
 
             $item2 = Item::get(311, 0, 1);
             $item2->setCustomName(TF::AQUA . "Ancient" . TF::GRAY . "Chestplate");
+            $item2->setLore(TF::AQUA . "Level:" . TF::GRAY . "§l§7[§r§b|||§f|||||||§l§7]§r");
             $item2->addEnchantment(new EnchantmentInstance($prot, 1));
             $item2->addEnchantment(new EnchantmentInstance($unb, 1));
             
             $item3 = Item::get(312, 0, 1);
             $item3->setCustomName(TF::AQUA . "Ancient" . TF::GRAY . "Leggings");
+            $item3->setLore(TF::AQUA . "Level:" . TF::GRAY . "§l§7[§r§b|||§f|||||||§l§7]§r");
             $item3->addEnchantment(new EnchantmentInstance($prot, 1));
             $item3->addEnchantment(new EnchantmentInstance($unb, 1));
 
             $item4 = Item::get(313, 0, 1);
             $item4->setCustomName(TF::AQUA . "Ancient" . TF::GRAY . "Boots");
+            $item4->setLore(TF::AQUA . "Level:" . TF::GRAY . "§l§7[§r§b|||§f|||||||§l§7]§r");
             $item4->addEnchantment(new EnchantmentInstance($prot, 1));
             $item4->addEnchantment(new EnchantmentInstance($unb, 1));
 
             $sword = Item::get(276, 0, 1);
             $sword->setCustomName(TF::AQUA . "Ancient" . TF::GRAY . "Sword");
+            $sword->setLore(TF::AQUA . "Level:" . TF::GRAY . "§l§7[§r§b|||§f|||||||§l§7]§r");
             $sword->addEnchantment(new EnchantmentInstance($sharp, 1));
             $sword->addEnchantment(new EnchantmentInstance($unb, 1));
 
             $pickaxe = Item::get(278, 0, 1);
             $pickaxe->setCustomName(TF::AQUA . "Ancient" . TF::GRAY . "Pickaxe");
+            $pickaxe->setLore(TF::AQUA . "Level:" . TF::GRAY . "§l§7[§r§b|||§f|||||||§l§7]§r");
             $pickaxe->addEnchantment(new EnchantmentInstance($eff, 1));
             $pickaxe->addEnchantment(new EnchantmentInstance($unb, 1));
 
             $axe = Item::get(279, 0, 1);
             $axe->setCustomName(TF::AQUA . "Ancient" . TF::GRAY . "Axe");
+            $axe->setLore(TF::AQUA . "Level:" . TF::GRAY . "§l§7[§r§b|||§f|||||||§l§7]§r");
             $axe->addEnchantment(new EnchantmentInstance($eff, 1));
             $axe->addEnchantment(new EnchantmentInstance($unb, 1));
 
@@ -110,7 +120,10 @@ class Ancient implements Listener
             $rand1 = mt_rand(0, 1);
 
             $player->getInventory()->addItem($tobegiven1[$rand1]);
-            $player->sendMessage(TF::LIGHT_PURPLE . "Opening Relic..");
+            $player->sendMessage(TF::LIGHT_PURPLE . "====================");
+            $player->sendMessage(TF::GREEN . "Opening Relic...");
+            $player->sendMessage(TF::LIGHT_PURPLE . "====================");
+            
             $player->getInventory()->removeItem($relic);
             break;
         }
