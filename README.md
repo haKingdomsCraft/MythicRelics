@@ -14,3 +14,7 @@ You can redeem your relic by placing it on a block.
 - Tier IV: Mythic Relic
 
 Each tier has its own rewards.
+
+# More Informations:
+
+If you have any issues loading this plugins please contact the author right away or open an issue.
