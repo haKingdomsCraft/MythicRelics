@@ -1,2 +1,3 @@
 # MythicRelics
-A simple relics plugin, that gives you relics while mining, and contains awesome rewards.
+<a href="https://poggit.pmmp.io/p/MythicRelics"><img src="https://poggit.pmmp.io/shield.api/MythicRelics"></a>
+
